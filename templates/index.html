@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Forest Prediction</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <h1>Random Forest Prediction</h1>
+    <form action="/predict" method="post">
+
+        <div class="inputs">
+            <table>
+                <tr>
+                    <td><label for="Gender">Gender:</label></td>
+                    <td><input type="text" id="Gender" name="Gender"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Married">Married:</label></td>
+                    <td><input type="text" id="Married" name="Married"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Dependents">Dependents:</label></td>
+                    <td><input type="text" id="Dependents" name="Dependents"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Education">Education:</label></td>
+                    <td><input type="text" id="Education" name="Education"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Self_Employed">Self_Employed:</label></td>
+                    <td><input type="text" id="Self_Employed" name="Self_Employed"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="ApplicantIncome">ApplicantIncome:</label></td>
+                    <td><input type="text" id="ApplicantIncome" name="ApplicantIncome"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="CoapplicantIncome">CoapplicantIncome:</label></td>
+                    <td><input type="text" id="CoapplicantIncome" name="CoapplicantIncome"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="LoanAmount">LoanAmount:</label></td>
+                    <td><input type="text" id="LoanAmount" name="LoanAmount"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Loan_Amount_Term">Loan_Amount_Term:</label></td>
+                    <td><input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Credit_History">Credit_History:</label></td>
+                    <td><input type="text" id="Credit_History" name="Credit_History"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Property_Area">Property_Area:</label></td>
+                    <td><input type="text" id="Property_Area" name="Property_Area"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="submit" value="Predict"></td>
+                </tr>
+            </table>
+        </div>
+
+
+    </form>
+
+    {% if prediction %}
+    <script>
+        alert("Status: {{ prediction }}");
+    </script>
+    {% endif %}
+
+</body>
+
+</html>
